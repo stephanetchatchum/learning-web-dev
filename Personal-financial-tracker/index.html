@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finances Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Header">
+        <header>
+            <h1>Personal Finances Tracker</h1>
+            <h4>Track your income and expenses</h4>
+        </header>
+    </div>
+    <div class="Main">
+        <main>
+            <section id="balance-summary">
+                <label for="Balance">Balance: </label>
+                <input type="number" id="Balance" name="Balance" readonly><br><br>
+                <label for="Income">Income: </label>
+                <input type="number" id="Income" name="Income" readonly>
+                <label for="Expenses">Expenses: </label>
+                <input type="number" id="Expenses" name="Expenses" readonly><br><br>
+                <button id="add-transaction">Add Transaction</button><br><br>
+            </section>
+            <section id="add-transaction-form">
+                <form id="add-transaction">
+                    <br>
+                    <label for="Description">Description: </label>
+                    <input type="text" id="Description" name="Description"><br><br>
+                    <label for="Amount">Amount: </label>
+                    <input type="number" id="Amount" name="Amount"><br><br>
+                    <label for="Type">Type</label>
+                    <select id="type">
+                        <option>Income</option>
+                        <option>Expense</option>
+                    </select><br><br>
+                    <button id="submit-transaction">Add Transaction</button><br><br>
+                </form>
+            </section>
+            <section id="transaction-history">
+                <table>
+                    <caption>Transaction History</caption>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                    </tr>
+                    <tr>
+                        <td>Salary</td>
+                        <td>2000</td>
+                        <td>Income</td>
+                    </tr>
+                    <tr>
+                        <td>Gym</td>
+                        <td>200</td>
+                        <td>Expense</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    </div>
+    <div class="Footer">
+        <footer>
+            <h4>By Stephane</h4>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
