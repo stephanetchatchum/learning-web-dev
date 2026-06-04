@@ -76,6 +76,32 @@ button{
     transition: 0.2s;
 }
 
+.transaction-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#cancel{
+    background: #787b83;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#cancel:hover{
+    background: #72757d;
+    transform: translateY(-2px);
+}
+
+#cancel:active{
+    background: #4e5056;
+    transform: translateY(2px);
+}
+
 button:hover{
     background: #1d4ed8;
     transform: translateY(-2px);
