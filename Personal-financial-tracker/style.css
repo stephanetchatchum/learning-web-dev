@@ -7,6 +7,8 @@
 
 body{
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     background: #f4f6f9;
     min-height: 100vh;
     flex-direction: column;
@@ -23,11 +25,13 @@ body{
 
 .Header h1{
     margin-bottom: 10px;
+    font-size: clamp(1.8rem, 5vw, 3rem);
 }
 
 .Header h4{
     font-weight: normal;
     color: #cbd5e1;
+    font-size: clamp(1rem, 5vw, 3rem);
 }
 
 /*Main*/
@@ -46,11 +50,18 @@ section{
 }
 
 #balance-summary{
-    text-align: center;
+    text-align: unset;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #balance-summary input{
-    width: 120px;
+    flex: 1 1 120px;
+    min-width: 150px;
+    height: 20px;
     padding: 10px;
     border: 0.5px solid #ddd;
     border-radius: 8px;
@@ -78,8 +89,14 @@ button{
 
 .transaction-buttons{
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.transaction-buttons button{
+    flex-wrap: 1 1 200px;
 }
 
 #cancel{
@@ -114,14 +131,18 @@ button:active{
 
 #add-transaction-form{
     display: none;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 50px;
 }
 
 #add-transaction-form input,#add-transaction-form select{
-    width: 250px;
+    flex: 1 1 120px;
     padding: 10px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
     outline: none;
+    margin-bottom: 10px;
 }
 
 #add-transaction-form input:focus,#add-transaction-form select:focus{
@@ -131,6 +152,10 @@ button:active{
 table{
     width: 100%;
     border-collapse: collapse;
+}
+
+#table-container{
+    overflow-x: auto;
 }
 
 caption{
@@ -166,4 +191,34 @@ tr:hover{
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 540px) {
+    .Main{
+        width: 95%;
+    }
+
+    section{
+        padding: 15px;
+    }
+
+    #babalance-summary{
+        flex-direction: column;
+    }
+
+    #balance-summary input{
+        width: 100%;
+    }
+
+    .transaction-buttons{
+        flex-direction: column;
+    }
+
+    button{
+        width: 100%;
+    }
+
+    #add-transaction-form input:focus,#add-transaction-form select:focus{
+        width: 100%;
+    }
 }

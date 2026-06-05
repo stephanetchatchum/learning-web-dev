@@ -31,36 +31,38 @@
                     <input type="text" id="Description" name="Description"><br><br>
                     <label for="Amount">Amount: </label>
                     <input type="number" id="Amount" name="Amount"><br><br>
-                    <label for="Type">Type</label>
+                    <label for="Type">Type: </label>
                     <select id="type">
                         <option>Income</option>
                         <option>Expense</option>
                     </select><br><br>
                     <div class="transaction-buttons">
                         <button id="submit-transaction">Add Transaction</button>
-                        <button id="cancel">Cancel</button><br><br>
+                        <button id="cancel" type="button">Cancel</button>
                     </div>
                 </form>
             </section>
             <section id="transaction-history">
-                <table>
-                    <caption>Transaction History</caption>
-                    <tr>
-                        <th>Description</th>
-                        <th>Amount</th>
-                        <th>Type</th>
-                    </tr>
-                    <tr>
-                        <td>Salary</td>
-                        <td>2000</td>
-                        <td>Income</td>
-                    </tr>
-                    <tr>
-                        <td>Gym</td>
-                        <td>200</td>
-                        <td>Expense</td>
-                    </tr>
-                </table>
+                <div id="table-container">
+                    <table>
+                        <caption>Transaction History</caption>
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                        </tr>
+                        <tr>
+                            <td>Salary</td>
+                            <td>2000</td>
+                            <td>Income</td>
+                        </tr>
+                        <tr>
+                            <td>Gym</td>
+                            <td>200</td>
+                            <td>Expense</td>
+                        </tr>
+                    </table>
+                </div>
             </section>
         </main>
     </div>
